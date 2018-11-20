@@ -1,0 +1,86 @@
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>addClass demo</title>
+  <style>
+  p {
+    margin: 8px;
+    font-size: 16px;
+  }
+  .selected {
+    color: plum;
+  }
+  .highlight {
+    background: paleturquoise;
+  }
+  
+  </style>
+  <script src="../HTML/jquery-3.3.1.js"></script>
+</head>
+<body>
+ 
+<p>Hello</p>
+<p>everyone</p>
+<p>and</p>
+
+
+<p>Goodbye</p>
+<h1>hi</h1>
+<style>
+    div {
+      background: white;
+    }
+    .red {
+      background: red;
+    }
+    .green {
+      background: green;
+    }
+    
+  p {
+    margin: 20px 0 0;
+  }
+  b {
+    color: blue;
+  }
+  
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+   
+   <div>This div should be white</div>
+   <div class="red">This div will be green because it now has the "green" and "red" classes.
+     It would be red if the addClass function failed.</div>
+   <div>This div should be white</div>
+   <p>There are zero green divs</p>
+ 
+<script>
+$( "p" ).addClass( "selected" );
+$("h1").addClass("selected");
+$("h1").addClass("highlight");
+
+$( "p:first" ).addClass( "selected highlight" );
+$( "div" ).addClass(function( index, currentClass ) {
+  var addedClass;
+ 
+  if ( currentClass === "red" ) {
+    addedClass = "green";
+    $( "p" ).text( "There is one green div" );
+  }
+ 
+  return currentClass;
+});
+$( "input" )
+  .change(function() {
+    var $input = $( this );
+    $( "p" ).html( ".attr( 'checked' ): <b>" + $input.attr( "checked" ) + "</b><br>" +
+      ".prop( 'checked' ): <b>" + $input.prop( "checked" ) + "</b><br>" +
+      ".is( ':checked' ): <b>" + $input.is( ":checked" ) + "</b>" );
+  })
+  .change();
+</script>
+ 
+</body>
+</html>

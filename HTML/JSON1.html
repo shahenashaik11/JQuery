@@ -1,0 +1,66 @@
+<html>
+    <head>
+            <script src="../HTML/jquery-3.3.1.js">
+                
+                
+       
+         
+
+
+            </script>
+    </head>
+    <body>
+        
+        <p id="demo"> </p>
+        <script> 
+        $(document).ready(function()
+        {
+            var data='[{"tname":"team1","players":[{"name":"A","iscaptain":true,"isbatsman":true,"isbowler":true,"isallrounder":true},{"name":"B","iscaptain":false,"isbatsman":true,"isbowler":false,"isallrounder":false},{"name":"C","iscaptain":false,"isbatsman":false,"isbowler":true,"isallrounder":false},{"name":"D","iscaptain":false,"isbatsman":true,"isbowler":false,"isallrounder":false},{"name":"E","iscaptain":false,"isbatsman":false,"isbowler":true,"isallrounder":false}]},{"tname":"team2","players":[{"name":"F","iscaptain":true,"isbatsman":true,"isbowler":true,"isallrounder":true},{"name":"G","iscaptain":false,"isbatsman":true,"isbowler":false,"isallrounder":false},{"name":"H","iscaptain":false,"isbatsman":false,"isbowler":true,"isallrounder":false},{"name":"I","iscaptain":false,"isbatsman":true,"isbowler":false,"isallrounder":false},{"name":"J","iscaptain":false,"isbatsman":false,"isbowler":true,"isallrounder":false}]}]';
+            var myData=JSON.parse();
+
+            
+        }
+        )
+        document.write.data;
+        
+           
+        var  myObj1, i, j, x = "",myObj2,y="";
+        myObj1= {
+                "tname":"team1",
+    
+                        "players": [
+                        {"name":"A", "iscaptain": true,"isbatsman":true,"isbowler":true,"isallrounder":true},
+                        {"name":"B", "iscaptain": false,"isbatsman":true,"isbowler":false,"isallrounder":false},
+                        {"name":"C", "iscaptain": false,"isbatsman":false,"isbowler":true,"isallrounder":false},
+                        {"name":"D", "iscaptain": false,"isbatsman":true,"isbowler":false,"isallrounder":false},
+                        {"name":"E", "iscaptain": false,"isbatsman":false,"isbowler":true,"isallrounder":false}
+       
+    ]
+}
+for (i in myObj2.players) {
+    x+= "<h2>" + myObj2.players[i].name + "</h2>";
+}
+document.getElementById("demo").innerHTML = x;
+
+myObj2= {
+    "tname":"team2",
+    
+    "players": [
+        {"name":"F", "iscaptain": true,"isbatsman":true,"isbowler":true,"isallrounder":true},
+        {"name":"G", "iscaptain": false,"isbatsman":true,"isbowler":false,"isallrounder":false},
+        {"name":"H", "iscaptain": false,"isbatsman":false,"isbowler":true,"isallrounder":false},
+        {"name":"I", "iscaptain": false,"isbatsman":true,"isbowler":false,"isallrounder":false},
+        {"name":"J", "iscaptain": false,"isbatsman":false,"isbowler":true,"isallrounder":false}
+       
+    ]
+}
+
+    for (i in myObj2.players) {
+    y += "<h2>" + myObj2.players[i].name + "</h2>";
+    }
+document.getElementById("demo").innerHTML = y;
+
+
+   </script>
+   </body>
+</html>
